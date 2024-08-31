@@ -16,8 +16,6 @@ class ProjectListSerializer(serializers.ModelSerializer):
         model = Project
         fields = ['id', 'project_name', 'client_name', 'created_at', 'created_by']
 
-
-
 class ProjectDetailSerializer(serializers.ModelSerializer):
     project_name = serializers.CharField(source='name')
     client_name = serializers.CharField(source='client.name', read_only=True)
@@ -28,7 +26,6 @@ class ProjectDetailSerializer(serializers.ModelSerializer):
         model = Project
         fields = ['id', 'project_name', 'client_name', 'users', 'created_at', 'created_by']
 
-    
 
 class ProjectShortSerializer(serializers.ModelSerializer): 
     project_name = serializers.CharField(source='name')
@@ -36,7 +33,6 @@ class ProjectShortSerializer(serializers.ModelSerializer):
         model = Project
         fields = ['id', 'project_name']
 
-    
 
 class ClientListSerializer(serializers.ModelSerializer):
     client_name = serializers.CharField(source='name')

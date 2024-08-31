@@ -7,8 +7,8 @@ from rest_framework.decorators import action
 from django.contrib.auth.models import User
 from .serializers import *
 from rest_framework.exceptions import ValidationError
-# Create your views here.
 
+# Create your views here.
 
 class ClientViewSet(viewsets.ModelViewSet):
     queryset = Client.objects.all()
@@ -27,15 +27,6 @@ class ClientViewSet(viewsets.ModelViewSet):
     def perform_update(self,serializer):
         serializer.save()
 
-
-    # @action(detail=True,methods=['get'])
-    # def projects(self, request, pk=None):
-    #     client = self.get_object()
-    #     projects = client.projects.all()
-    #     serializer = ProjectSerializer(projects, many=True)
-    #     return Response(serializer.data)
-    
-
 class ProjectViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated]
     
@@ -44,7 +35,6 @@ class ProjectViewSet(viewsets.ModelViewSet):
         loggedin = Project.objects.filter(users=user)
         return loggedin
 
-
     def get_serializer_class(self):
         if self.action == 'list':
             return ProjectListSerializer
@@ -52,8 +42,6 @@ class ProjectViewSet(viewsets.ModelViewSet):
             return ProjectDetailSerializer
         return ProjectDetailSerializer
     
-    
-
     def perform_create(self, serializer):
         try:
             client_id = self.request.data.get('client_id')
