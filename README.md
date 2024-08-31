@@ -46,7 +46,7 @@ This project is a Django-based REST API for managing clients and projects. The A
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/django-project-management-api.git
+   git clone https://github.com/SiddheshDalvi07/NimapApi.git
    cd django-project-management-api
    ```
 
@@ -130,4 +130,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 
 For any questions, feel free to contact the project maintainer at [your-email@example.com](mailto:your-email@example.com).
-```
+
