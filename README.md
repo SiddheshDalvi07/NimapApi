@@ -102,6 +102,24 @@ This project is a Django-based REST API for managing clients and projects. The A
 
    Open your web browser or API client (such as Postman) and navigate to `http://127.0.0.1:8000/api/`
 
+Visit `http://127.0.0.1:8000/admin` to access the Django admin panel.
+
+## Usage Instructions
+
+### Create Users
+
+- **Step 1**: Log in to the Django admin panel at `http://127.0.0.1:8000/admin` using your superuser credentials.
+- **Step 2**: Navigate to the **Users** section and create multiple users as needed.
+
+### Login and Logout
+
+- **Login**: Use the login page at `http://127.0.0.1:8000/login` to log in with your user credentials.
+- **Logout**: To log out, visit the logout URL directly at `http://127.0.0.1:8000/logout`.
+
+## Note
+
+Ensure that you have created multiple users through the Django admin panel. These users can then log in via the login page, and they can access the API endpoints as per their permissions.   
+
 ## Validation Rules
 
 - **Unique Project Names**: A client cannot have two projects with the same name. A `ValidationError` will be raised if you try to create or update a project with a duplicate name for the same client.
