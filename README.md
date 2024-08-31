@@ -102,8 +102,6 @@ This project is a Django-based REST API for managing clients and projects. The A
 
    Open your web browser or API client (such as Postman) and navigate to `http://127.0.0.1:8000/api/`
 
-Visit `http://127.0.0.1:8000/admin` to access the Django admin panel.
-
 ## Usage Instructions
 
 ### Create Users
