@@ -1,7 +1,3 @@
-Certainly! Here's a sample `README.md` file for your Django project that describes its setup, usage, and other relevant details.
-
-### `README.md`
-
 # Django Project Management API
 
 This project is a Django-based REST API for managing clients and projects. The API supports user authentication, CRUD operations for clients and projects, and ensures that project names are unique per client.
